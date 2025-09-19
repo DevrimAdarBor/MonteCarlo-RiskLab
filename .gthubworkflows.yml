@@ -22,8 +22,9 @@ jobs:
     python -m pip install --upgrade pip
     pip install -r requirements.txt -r requirements-dev.txt
 
-      - name: Lnt (flake8)
-        run: flake8 mc_rsklab
+      - name: Lint (flake8)
+        run: flake8 .
+
 
       - name: Type check (mypy)
         run: mypy mc_rsklab --gnore-mssng-mports
