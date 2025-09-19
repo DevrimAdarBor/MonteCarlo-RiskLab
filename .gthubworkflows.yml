@@ -17,10 +17,10 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install deps
-        run: |
-          python -m pp nstall --upgrade p
-          p          pp nstall -r requrements.txt -r requrements-dev.txt
+     - name: Install deps
+  run: |
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt -r requirements-dev.txt
 
       - name: Lnt (flake8)
         run: flake8 mc_rsklab
