@@ -1,0 +1,8 @@
+﻿yfinance>=0.2.30
+pandas>=1.5
+numpy>=1.23
+scipy>=1.10
+matplotlib>=3.7
+arch>=6.0
+statsmodels>=0.14
+sobol_seq>=0.2

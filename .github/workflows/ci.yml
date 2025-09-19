@@ -1,0 +1,32 @@
+﻿name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: |
+          python -m pp nstall --upgrade p
+          p          pp nstall -r requrements.txt -r requrements-dev.txt
+
+      - name: Lnt (flake8)
+        run: flake8 mc_rsklab
+
+      - name: Type check (mypy)
+        run: mypy mc_rsklab --gnore-mssng-mports
+
+      - name: Test (pytest)
+        run: pytest -q

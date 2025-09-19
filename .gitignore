@@ -1,0 +1,11 @@
+﻿__pycache__/
+*.pycod
+*.egg-nfo/
+.venv/
+.env
+out/
+output/
+*.csv
+*.png
+.DS_Store
+Thumbs.db
